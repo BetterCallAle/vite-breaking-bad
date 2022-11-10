@@ -1,1 +1,15 @@
-@import "node_modules/bootstrap/scss/bootstrap.scss"
+// Import ms_variables
+@use "./partials/variables" as *;
+
+// Import Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+
+// Style
+body{
+    background-color: $main-bg;
+}
+
+img{
+    max-width: 100%;
+}
