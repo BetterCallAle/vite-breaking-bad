@@ -18,11 +18,11 @@ export default {
 <template>
     <section id="cards-section">
         <div class="container bg-light py-5">
-            <div class="cards-section-top bg-dark p-3 my-4">
+            <div class="cards-section-top bg-dark p-3 my-2">
                 <h3 class="text-light">{{ `Found ${store.characters.length} characters` }}</h3>
             </div>
 
-            <div class="card-section-bottom">
+            <div class="card-section-bottom my-4">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
