@@ -7,13 +7,13 @@ export default {
 </script>
 
 <template>
-    <div class="ms_card">
+    <div class="ms_card text-center">
         <div class="ms_card-top">
             <img :src="character.img"
-                :alt="`Foto di ${character.name}`">
+                :alt="`Foto di ${character.name}`" class="w-100">
         </div>
 
-        <div class="ms_card-bottom text-center">
+        <div class="ms_card-bottom">
             <h3 class="ms_card-title text-light">{{ character.name }}</h3>
 
             <h4 class="ms_card-subtitle ">{{ character.category }}</h4>
@@ -28,7 +28,7 @@ export default {
 .ms_card {
     background-color: $main-bg;
     padding: 1rem .8rem;
-    min-height: 380px;
+    min-height: 400px;
     .ms_card-bottom {
             .ms_card-title {
                 font-size: 1rem;
