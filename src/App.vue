@@ -3,13 +3,15 @@ import axios from "axios";
 import AppHeader from "./components/AppHeader.vue";
 import AppSelector from "./components/AppSelector.vue";
 import AppMain from "./components/AppMain.vue";
+import AppLoader from "./components/AppLoader.vue";
 import { store } from "./store"
 
 export default{
     components: {
         AppHeader,
         AppSelector,
-        AppMain
+        AppMain,
+        AppLoader
     },
 
     data() {
@@ -38,10 +40,7 @@ export default{
     <main>
         <AppSelector />
         <!-- Loading -->
-        <div class="loading text-center" v-if="!store.isLoaded">
-            <img src="../src/assets/img/loading.png" alt="Walter White Loading Meme" class="loading-img">
-            <span class="loading-txt text-light d-block">Loading...</span>
-        </div>
+        <AppLoader v-if="!store.isLoaded" />
         <!-- Main after the loading screen -->
         <AppMain v-else />
     </main>
@@ -49,20 +48,4 @@ export default{
 
 <style lang="scss">
 @use "./styles/general.scss" as *;
-
-.loading-img {
-    width: 300px;
-    margin: 4rem 0;
-    animation: rotating 1s infinite;
-}
-
-@keyframes rotating {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
 </style>
