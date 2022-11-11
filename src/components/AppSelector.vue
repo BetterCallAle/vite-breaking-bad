@@ -18,7 +18,7 @@ export default {
             <select id="select-category"
                     v-model="store.optionValue"
                     @change="$emit('optionChanged')"
-                    class="form-select w-50 text-center"
+                    class="form-select w-25 text-center"
             >
 
                 <option value="">Select Category</option>
