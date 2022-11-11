@@ -28,7 +28,7 @@ export default {
 .ms_card {
     height: 100%;
     background-color: $main-bg;
-        padding: 1rem .8rem;
+    padding: 1rem .8rem;
     
         .ms_card-bottom {
             .ms_card-title {
@@ -43,7 +43,7 @@ export default {
     
             p {
                 font-size: .8rem;
-        }
+            }
 
         .ms_card-subtitle {
             color: $font-gray-color;
