@@ -1,11 +1,12 @@
 <script>
 import {store} from '../store'
 import AppCards from './AppCards.vue';
-
+import AppCounter from './AppCounter.vue';
 export default {
     name: "AppMain",
     components:{
-        AppCards
+        AppCards,
+        AppCounter
     },
     data(){
         return{
@@ -18,9 +19,7 @@ export default {
 <template>
     <section id="cards-section">
         <div class="container bg-light py-5">
-            <div class="cards-section-top bg-dark p-3 my-2">
-                <h3 class="text-light">{{ `Found ${store.characters.length} characters` }}</h3>
-            </div>
+            <AppCounter/>
 
             <div class="card-section-bottom my-4">
                 <div class="container">
