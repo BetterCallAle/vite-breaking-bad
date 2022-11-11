@@ -28,6 +28,11 @@ export default{
             // turn off the loading animation
             this.store.isLoaded = true;
         })
+    },
+    methods:{
+        loadCharacters(){
+            console.log("selezione cambiata");
+        }
     }
   
 }
@@ -38,7 +43,7 @@ export default{
     <AppHeader />
 
     <main>
-        <AppSelector />
+        <AppSelector @optionChanged="loadCharacters" />
         <!-- Loading -->
         <AppLoader v-if="!store.isLoaded" />
         <!-- Main after the loading screen -->
