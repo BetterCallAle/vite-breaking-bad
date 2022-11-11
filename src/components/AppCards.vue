@@ -27,7 +27,7 @@ export default {
 
 .ms_card {
     height: 100%;
-        background-color: $main-bg;
+    background-color: $main-bg;
         padding: 1rem .8rem;
     
         .ms_card-bottom {
@@ -38,11 +38,11 @@ export default {
             }
     
             h4 {
-                font-size: .7rem;
+                font-size: .9rem;
             }
     
             p {
-                font-size: .6rem;
+                font-size: .8rem;
         }
 
         .ms_card-subtitle {
