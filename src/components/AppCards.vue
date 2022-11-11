@@ -26,22 +26,23 @@ export default {
 @use "../styles/partials/variables" as *;
 
 .ms_card {
-    background-color: $main-bg;
-    padding: 1rem .8rem;
-    min-height: 400px;
-    .ms_card-bottom {
+    height: 100%;
+        background-color: $main-bg;
+        padding: 1rem .8rem;
+    
+        .ms_card-bottom {
             .ms_card-title {
                 font-size: 1rem;
-                    text-transform: uppercase;
-                    margin-top: 1rem
-                }
-                
-                h4 {
-                    font-size: .9rem;
-                }
-                
-                p {
-                    font-size: .8rem;
+                text-transform: uppercase;
+                margin-top: 1rem
+            }
+    
+            h4 {
+                font-size: .7rem;
+            }
+    
+            p {
+                font-size: .6rem;
         }
 
         .ms_card-subtitle {
