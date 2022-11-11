@@ -20,18 +20,25 @@ export default{
         }
     },
     created() {
-        // add a flag for a loading animation
-        this.store.isLoaded = false;
-        // export the data api in store.characters
-        axios.get("https://www.breakingbadapi.com/api/characters").then((resp) => {
-            this.store.characters = resp.data;
-            // turn off the loading animation
-            this.store.isLoaded = true;
-        })
+       this.loadCharacters()
     },
     methods:{
         loadCharacters(){
-            console.log("selezione cambiata");
+             // add a flag for a loading animation
+            this.store.isLoaded = false;
+            //create a variable with the API URL
+            let apiUrl = "https://www.breakingbadapi.com/api/characters"
+            //if "Better Call Saul" is selected, show only the Better Call Saul's characters else if "Breaking Bad" is selected, show only the Breaking Bad Characters
+            if(this.store.optionValue){
+                apiUrl += `?category=${this.store.optionValue}`
+            } 
+            // export the data api in store.characters
+            axios.get(apiUrl)
+            .then((resp) => {
+                this.store.characters = resp.data;
+                // turn off the loading animation
+                this.store.isLoaded = true;
+        })
         }
     }
   
